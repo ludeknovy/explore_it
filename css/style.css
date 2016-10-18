@@ -1,7 +1,7 @@
-#mainPopup {
+.mainPopup {
 		padding: 10px;
 		height: auto;
-		width: 220px;
+		width: 273px;
 		font-family: Helvetica, Ubuntu, Arial, sans-serif;
     margin-bottom: 0px;
 	}
@@ -14,3 +14,71 @@
       margin-right: 10px;
       /* padding-right: 7px; */
   }
+
+legend {
+	font-size: 15px;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.btn {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.btn.first {
+	margin-top: 30px;
+}
+
+label {
+	display: inline;
+	font-weight: normal;
+}
+
+fieldset {
+	margin-top: 25px;
+}
+
+#system {
+	margin-top: 10px;
+}
+
+#proxyForm a {
+	font-size: 12px;
+}
+
+#fixed_servers input {
+	display: inline;
+}
+
+select {
+	display: block;
+	margin-bottom: 5px;
+  margin-left: 55px;
+}
+
+.col-xs-10 {
+	margin-bottom: 5px;
+}
+
+.nav-tabs>li.active>a {
+	color: #1b82da  !important;
+	background-color: none;
+	border: none !important;
+}
+
+.nav-tabs>li>a {
+	border: none !important;
+}
+
+.nav-tabs {
+	border: none !important;
+}
+
+li.active>a:focus {
+	color: #337ab7;
+}
+
+.nav-link {
+	color: #a6a8ab;
+}
