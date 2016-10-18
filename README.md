@@ -8,6 +8,8 @@
 [screen2]: https://github.com/ludeknovy/explore_it/blob/master/screenshot/proxy.png "Screenshot 2"
 
 ####Credits:
-https://clipboardjs.com/ *separate paragraph*.
-http://extensionizr.com/ *separate paragraph*.
-http://www.flaticon.com/ *separate paragraph*.
+https://clipboardjs.com/
+
+http://extensionizr.com/
+
+http://www.flaticon.com/
