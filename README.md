@@ -1,8 +1,8 @@
 # Explore it!
 
 ### Screenshot:
-[screen1]
-[screen2]
+![screen1]
+![screen2]
 
 [screen1]: https://github.com/ludeknovy/explore_it/blob/master/screenshot/explore.png "Screenshot 1"
 [screen2]: https://github.com/ludeknovy/explore_it/blob/master/screenshot/proxy.png "Screenshot 2"
