@@ -575,7 +575,7 @@ ProxyFormController.prototype = {
         success.classList.remove('visible');
       else
         window.close();
-    }, 4000);
+    }, 200);
   },
 
 
