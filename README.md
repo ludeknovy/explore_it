@@ -1,6 +1,6 @@
 # Explore it!
 
-### Screenshot:
+### Screenshots:
 ![screen1]
 ![screen2]
 
@@ -8,6 +8,6 @@
 [screen2]: https://github.com/ludeknovy/explore_it/blob/master/screenshot/proxy.png "Screenshot 2"
 
 ####Credits:
-https://clipboardjs.com/,
-http://extensionizr.com/,
-http://www.flaticon.com/,
+https://clipboardjs.com/ *separate paragraph*.
+http://extensionizr.com/ *separate paragraph*.
+http://www.flaticon.com/ *separate paragraph*.
