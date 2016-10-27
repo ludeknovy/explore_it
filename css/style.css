@@ -1,19 +1,20 @@
 .mainPopup {
-		padding: 10px;
-		height: auto;
-		width: 273px;
-		font-family: Helvetica, Ubuntu, Arial, sans-serif;
-    margin-bottom: 0px;
-	}
-	h1 {
-		font-size: 2em;
-	}
+	padding: 10px;
+	height: auto;
+	width: 350px;
+	min-height: 180px;
+	font-family: Helvetica, Ubuntu, Arial, sans-serif;
+	margin-bottom: 0px;
+}
+h1 {
+	font-size: 2em;
+}
 
 .nav>li>a>img {
-      max-width: 14px;
-      margin-right: 10px;
-      /* padding-right: 7px; */
-  }
+	max-width: 14px;
+	margin-right: 10px;
+	/* padding-right: 7px; */
+}
 
 legend {
 	font-size: 15px;
@@ -54,7 +55,7 @@ fieldset {
 select {
 	display: block;
 	margin-bottom: 5px;
-  margin-left: 55px;
+	margin-left: 55px;
 }
 
 .col-xs-10 {
@@ -81,4 +82,44 @@ li.active>a:focus {
 
 .nav-link {
 	color: #a6a8ab;
+}
+
+#resultWhiteSpaces {
+	font-weight: bold;
+}
+
+
+
+#string-tab p {
+	margin-top: 8px;
+}
+
+.inline-btn {
+	margin-top: 0px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: -1px;
+    min-width: 92px;
+}
+
+#resultGenerator {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 330px;
+	float: left;
+}
+
+#clipboard {
+	visibility: hidden;
+	float: left;
+}
+
+.generate {
+	margin-top: 30px;
+}
+
+#size {
+	min-width: 35px;
+	height: 34px;
 }

@@ -1,6 +1,7 @@
 <!doctype html>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 <script src="../../js/jquery-3.1.1.js" crossorigin="anonymous"></script>
 <script src="../../js/bootstrap.min.js" crossorigin="anonymous"></script>
 <script src="../../js/clipboard.min.js" crossorigin="anonymous"></script>
@@ -15,7 +16,10 @@
       <a class="nav-link active" data-toggle="tab" href="#explore">Explore</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#proxytab">Proxy Settings</a>
+      <a class="nav-link" data-toggle="tab" href="#string-tab">Stringear</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#proxytab">Proxy</a>
     </li>
   </ul>
 
@@ -33,180 +37,208 @@
               <a href="#" class="dropdown-toggle lorem" data-toggle="dropdown"><img src="../../icons/lorem1.png">Lorems <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a class="copy" href="#"  data-clipboard-text="Příliš žluťoučký kůň úpěl ďábelské ódy">Czech</a></li>
-      					<li><a class="copy" href="#"  data-clipboard-text="á Á č Č ď Ď é É ě Ě í Í ň Ň ó Ó ř Ř š Š ť Ť ú Ú ů Ů ý Ý ž Ž">Czech special char</a></li>
-      					<li><a class="copy" href="#"  data-clipboard-text="証碁併第文害担去調件沸暮問内為供。義留南能住授競士者散碁製展。士的賞未弱目経鹿致存門徳覧送近給改熱他。業芸事節取月題読告読要年止止属志継提業看。">Chinese</a></li>
-      					<li><a class="copy" href="#"  data-clipboard-text="寿限無、寿限無。シューリンガンのグーリンダイ、五劫の擦り切れ。長久命の長助。寿限無、寿限無、やぶら小路の藪柑子、海砂利水魚の、パイポパイポ パイポのシューリンガン。">Japanese</a></li>
-      					<li><a class="copy" href="#"  data-clipboard-text="Лорем ипсум долор сит амет, но ноструд инструцтиор пер. Ан патриояуе тхеопхрастус мел. Но алияуид долорес пертинах ест. Усу тота нихил дефиниебас еу, пер ерос яуандо те.">Cyrillic</a></li>
-              </ul>
-            </li>
-          </ul>
-      		<ul class="nav navbar-nav navbar-right">
-      			<li class="dropdown">
-      				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="../../icons/phone.png">Phone numbers <b class="caret"></b></a>
-      				<ul class="dropdown-menu">
-      					<li><a class="copy" href="#" data-clipboard-text="722 567 123">Czech</a></li>
-      					<li><a class="copy" href="#" data-clipboard-text="722567123">Czech [no spaces]</a></li>
-      					<li><a class="copy" href="#" data-clipboard-text="+420 722 567 123">Czech [prefix]</a></li>
-      					<li><a class="copy" href="#" data-clipboard-text="+420722567123">Czech [prefix, no spaces]</a></li>
-      				</ul>
-      			</li>
-      		</ul>
-      		<ul class="nav navbar-nav navbar-right">
-      			<li class="dropdown">
-      				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="../../icons/post.png">Postal codes<b class="caret"></b></a>
-      				<ul class="dropdown-menu">
-      					<li><a class="copy" href="#" data-clipboard-text="147 00">Czech</a></li>
-      					<li><a class="copy" href="#" data-clipboard-text="14700">Czech [no space]</a></li>
-      					<li><a class="copy" href="#" data-clipboard-text="ZE1 0PY">UK</a></li>
-      				</ul>
-      			</li>
-      		</ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="../../icons/exploit.png">Exploit <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a class="copy" data-clipboard-text="<script>alert(1)</script>" href="#">XSS simple</a></li>
-                <li><a class="copy" data-clipboard-text="'OR 1=1" href="#">SQL injection</a></li>
-              </ul>
-            </li>
-          </ul>
-      		<ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="../../icons/city.png">Cities <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a class="copy" data-clipboard-text="Aš" href="#">Czech [shortest]</a></li>
-      					<li><a class="copy" data-clipboard-text="Nová Ves u Nového Města na Moravě" href="#">Czech [longest]</a></li>
+                <li><a class="copy" href="#"  data-clipboard-text="á Á č Č ď Ď é É ě Ě í Í ň Ň ó Ó ř Ř š Š ť Ť ú Ú ů Ů ý Ý ž Ž">Czech special char</a></li>
+                <li><a class="copy" href="#"  data-clipboard-text="証碁併第文害担去調件沸暮問内為供。義留南能住授競士者散碁製展。士的賞未弱目経鹿致存門徳覧送近給改熱他。業芸事節取月題読告読要年止止属志継提業看。">Chinese</a></li>
+                <li><a class="copy" href="#"  data-clipboard-text="寿限無、寿限無。シューリンガンのグーリンダイ、五劫の擦り切れ。長久命の長助。寿限無、寿限無、やぶら小路の藪柑子、海砂利水魚の、パイポパイポ パイポのシューリンガン。">Japanese</a></li>
+                <li><a class="copy" href="#"  data-clipboard-text="Лорем ипсум долор сит амет, но ноструд инструцтиор пер. Ан патриояуе тхеопхрастус мел. Но алияуид долорес пертинах ест. Усу тота нихил дефиниебас еу, пер ерос яуандо те.">Cyrillic</a></li>
               </ul>
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="../../icons/person.png">Names <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a class="copy" data-clipboard-text="Libuše Šmuclerová" href="#">Czech [famale]</a></li>
-      					<li><a class="copy" data-clipboard-text="Jiří Řehák" href="#">Czech [male]</a></li>
-                <li><a class="copy" data-clipboard-text="Беляева Марина" href="#">Russian [female]</a></li>
-                <li><a class="copy" data-clipboard-text="Жуков Алексей" href="#">Russian [male]</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </nav>
-    </div>
+           <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="../../icons/phone.png">Phone numbers <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+             <li><a class="copy" href="#" data-clipboard-text="722 567 123">Czech</a></li>
+             <li><a class="copy" href="#" data-clipboard-text="722567123">Czech [no spaces]</a></li>
+             <li><a class="copy" href="#" data-clipboard-text="+420 722 567 123">Czech [prefix]</a></li>
+             <li><a class="copy" href="#" data-clipboard-text="+420722567123">Czech [prefix, no spaces]</a></li>
+           </ul>
+         </li>
+       </ul>
+       <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="../../icons/post.png">Postal codes<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+           <li><a class="copy" href="#" data-clipboard-text="147 00">Czech</a></li>
+           <li><a class="copy" href="#" data-clipboard-text="14700">Czech [no space]</a></li>
+           <li><a class="copy" href="#" data-clipboard-text="ZE1 0PY">UK</a></li>
+         </ul>
+       </li>
+     </ul>
+     <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="../../icons/exploit.png">Exploit <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a class="copy" data-clipboard-text="<script>alert(1)</script>" href="#">XSS simple</a></li>
+          <li><a class="copy" data-clipboard-text="'OR 1=1" href="#">SQL injection</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="../../icons/city.png">Cities <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a class="copy" data-clipboard-text="Aš" href="#">Czech [shortest]</a></li>
+          <li><a class="copy" data-clipboard-text="Nová Ves u Nového Města na Moravě" href="#">Czech [longest]</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="../../icons/person.png">Names <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a class="copy" data-clipboard-text="Libuše Šmuclerová" href="#">Czech [famale]</a></li>
+          <li><a class="copy" data-clipboard-text="Jiří Řehák" href="#">Czech [male]</a></li>
+          <li><a class="copy" data-clipboard-text="Беляева Марина" href="#">Russian [female]</a></li>
+          <li><a class="copy" data-clipboard-text="Жуков Алексей" href="#">Russian [male]</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+</div>
 
-    <div class="tab-pane" id="proxytab" role="tabpanel">
-      <nav class="navbar navbar-default mainPopup" role="navigation">
+<div class="tab-pane" id="proxytab" role="tabpanel">
+  <nav class="navbar navbar-default mainPopup" role="navigation">
+    <div role="main">
+      <form id="proxyForm">
+        <a href="#" data-toggle="collapse" data-target=".advanced">Show advanced settings</a>
 
-      <div role="main">
-        <form id="proxyForm">
-          <a href="#" data-toggle="collapse" data-target=".advanced">Show advanced settings</a>
-
-          <fieldset id="system" class="collapse advanced">
-            <legend>System Settings</legend>
-            <input type="radio" name="proxyType" id="proxyTypeSystem" value="system">
-            <label for="proxyTypeSystem">Use the <em>system's proxy settings</em>.</label>
-          </fieldset>
-          <fieldset id="direct">
-            <legend>Direct Connection</legend>
-            <input type="radio" name="proxyType" id="proxyTypeDirect" value="direct">
-            <label for="proxyTypeDirect">Your computer is <em>directly connected</em> to the internet; no need for a proxy.</label>
-          </fieldset>
-          <fieldset id="pac_script" class="collapse advanced">
-            <legend>Automatic Configuration</legend>
-            <input type="radio" name="proxyType" id="proxyTypeAutoconfig" value="autoconfig">
-            <label for="proxyTypeAutoconfig">Your proxy supports <em>automatic configuration</em>.</label>
-            <section>
-              <label for="autoconfigURL">Autoconfiguration URL (PAC file)</label>
-              <input type="url" name="autoconfigURL" id="autoconfigURL">
-              <input type="hidden" name="autoconfigData" id="autoconfigData">
-            </section>
-          </fieldset>
-          <fieldset id="fixed_servers">
-            <legend>Manual Proxy</legend>
-            <input type="radio" name="proxyType" id="proxyTypeManual" value="manual">
-            <label for="proxyTypeManual">Configure your proxy settings <em>manually</em>.</label>
-            <section>
-              <fieldset>
-                <legend>HTTP</legend>
-                <select id="proxySchemeHttp" name="proxySchemeHttp">
-                  <option selected value="http">http://</option>
-                  <option value="https">https://</option>
-                  <option value="socks4">socks4://</option>
-                  <option value="socks5">socks5://</option>
-                </select>
-                <label class="col-xs-2 col-form-label" for="proxyHostHttp">Host</label>
-                <div class="col-xs-10">
-                  <input type="text" name="proxyHostHttp" id="proxyHostHttp">
-                </div>
-                <label class="col-xs-2 col-form-label" for="proxyPortHttp">Port</label>
-                <div class="col-xs-10">
-                  <input type="text" name="proxyPortHttp" id="proxyPortHttp" class="port">
-                </div>
-                <input class="form-check-input" type="checkbox" name="singleProxyForEverything" id="singleProxyForEverything">
-                <label for="singleProxyForEverything">Use the same proxy server for all protocols</label>
-              </fieldset>
-              <fieldset class="collapse advanced">
-                <legend>HTTPS</legend>
-                <select id="proxySchemeHttps" name="proxySchemeHttps">
-                  <option selected value="http">http://</option>
-                  <option value="https">https://</option>
-                  <option value="socks4">socks4://</option>
-                  <option value="socks5">socks5://</option>
-                </select>
-                <label class="col-xs-2 col-form-label" for="proxyHostHttps">Host</label>
-                <div class="col-xs-10">
-                  <input type="text" name="proxyHostHttps" id="proxyHostHttps">
+        <fieldset id="system" class="collapse advanced">
+          <legend>System Settings</legend>
+          <input type="radio" name="proxyType" id="proxyTypeSystem" value="system">
+          <label for="proxyTypeSystem">Use the <em>system's proxy settings</em>.</label>
+        </fieldset>
+        <fieldset id="direct">
+          <legend>Direct Connection</legend>
+          <input type="radio" name="proxyType" id="proxyTypeDirect" value="direct">
+          <label for="proxyTypeDirect">Your computer is <em>directly connected</em> to the internet; no need for a proxy.</label>
+        </fieldset>
+        <fieldset id="pac_script" class="collapse advanced">
+          <legend>Automatic Configuration</legend>
+          <input type="radio" name="proxyType" id="proxyTypeAutoconfig" value="autoconfig">
+          <label for="proxyTypeAutoconfig">Your proxy supports <em>automatic configuration</em>.</label>
+          <section>
+            <label for="autoconfigURL">Autoconfiguration URL (PAC file)</label>
+            <input type="url" name="autoconfigURL" id="autoconfigURL">
+            <input type="hidden" name="autoconfigData" id="autoconfigData">
+          </section>
+        </fieldset>
+        <fieldset id="fixed_servers">
+          <legend>Manual Proxy</legend>
+          <input type="radio" name="proxyType" id="proxyTypeManual" value="manual">
+          <label for="proxyTypeManual">Configure your proxy settings <em>manually</em>.</label>
+          <section>
+            <fieldset>
+              <legend>HTTP</legend>
+              <select id="proxySchemeHttp" name="proxySchemeHttp">
+                <option selected value="http">http://</option>
+                <option value="https">https://</option>
+                <option value="socks4">socks4://</option>
+                <option value="socks5">socks5://</option>
+              </select>
+              <label class="col-xs-2 col-form-label" for="proxyHostHttp">Host</label>
+              <div class="col-xs-10">
+                <input type="text" name="proxyHostHttp" id="proxyHostHttp">
               </div>
-                <label class="col-xs-2 col-form-label" for="proxyPortHttps">Port</label>
-                <div class="col-xs-10">
+              <label class="col-xs-2 col-form-label" for="proxyPortHttp">Port</label>
+              <div class="col-xs-10">
+                <input type="text" name="proxyPortHttp" id="proxyPortHttp" class="port">
+              </div>
+              <input class="form-check-input" type="checkbox" name="singleProxyForEverything" id="singleProxyForEverything">
+              <label for="singleProxyForEverything">Use the same proxy server for all protocols</label>
+            </fieldset>
+            <fieldset class="collapse advanced">
+              <legend>HTTPS</legend>
+              <select id="proxySchemeHttps" name="proxySchemeHttps">
+                <option selected value="http">http://</option>
+                <option value="https">https://</option>
+                <option value="socks4">socks4://</option>
+                <option value="socks5">socks5://</option>
+              </select>
+              <label class="col-xs-2 col-form-label" for="proxyHostHttps">Host</label>
+              <div class="col-xs-10">
+                <input type="text" name="proxyHostHttps" id="proxyHostHttps">
+              </div>
+              <label class="col-xs-2 col-form-label" for="proxyPortHttps">Port</label>
+              <div class="col-xs-10">
                 <input class="col-xs-2 col-form-label" type="text" name="proxyPortHttps" id="proxyPortHttps" class="port">
               </div>
-              </fieldset>
-              <fieldset class="collapse advanced">
-                <legend>FTP</legend>
-                <select id="proxySchemeFtp" name="proxySchemeFtp">
-                  <option selected value="http">http://</option>
-                  <option value="https">https://</option>
-                  <option value="socks4">socks4://</option>
-                  <option value="socks5">socks5://</option>
-                </select>
-                <label class="col-xs-2 col-form-label" for="proxyHostFtp">Host</label>
-                <div class="col-xs-10">
-                  <input type="text" name="proxyHostFtp" id="proxyHostFtp">
+            </fieldset>
+            <fieldset class="collapse advanced">
+              <legend>FTP</legend>
+              <select id="proxySchemeFtp" name="proxySchemeFtp">
+                <option selected value="http">http://</option>
+                <option value="https">https://</option>
+                <option value="socks4">socks4://</option>
+                <option value="socks5">socks5://</option>
+              </select>
+              <label class="col-xs-2 col-form-label" for="proxyHostFtp">Host</label>
+              <div class="col-xs-10">
+                <input type="text" name="proxyHostFtp" id="proxyHostFtp">
               </div>
-                <label class="col-xs-2 col-form-label" for="proxyPortFtp">Port</label>
-                <div class="col-xs-10">
-                  <input type="text" name="proxyPortFtp" id="proxyPortFtp" class="port">
-                </div>
-              </fieldset>
-              <fieldset class="collapse advanced">
-                <legend>Fallback</legend>
-                <select id="proxySchemeFallback" name="proxySchemeFallback">
-                  <option selected value="http">http://</option>
-                  <option value="https">https://</option>
-                  <option value="socks4">socks4://</option>
-                  <option value="socks5">socks5://</option>
-                </select>
-                <label class="col-xs-2 col-form-label" for="proxyHostFallback">Host</label>
-                <div class="col-xs-10">
-                  <input type="text" name="proxyHostFallback" id="proxyHostFallback">
-                </div>
-                <label class="col-xs-2 col-form-label" for="proxyPortFallback">Port</label>
-                <div class="col-xs-10">
-                  <input type="text" name="proxyPortFallback" id="proxyPortFallback" class="port">
-                </div>
-              </fieldset>
-              <fieldset class="collapse advanced">
-                <label for="bypassList">Bypass proxy for these hosts:</label>
-                <textarea class="form-control" id="bypassList" name="bypassList" placeholder="<local>,192.168.1.1/16, .example.com"></textarea>
-              </fieldset>
-            </section>
-          </fieldset>
-          <input class="btn btn-primary first" type="submit" value="Save proxy settings">
-          <button class="btn btn-primary" value="incognito">Configure incognito window settings.</button>
-        </form>
-      </div>
+              <label class="col-xs-2 col-form-label" for="proxyPortFtp">Port</label>
+              <div class="col-xs-10">
+                <input type="text" name="proxyPortFtp" id="proxyPortFtp" class="port">
+              </div>
+            </fieldset>
+            <fieldset class="collapse advanced">
+              <legend>Fallback</legend>
+              <select id="proxySchemeFallback" name="proxySchemeFallback">
+                <option selected value="http">http://</option>
+                <option value="https">https://</option>
+                <option value="socks4">socks4://</option>
+                <option value="socks5">socks5://</option>
+              </select>
+              <label class="col-xs-2 col-form-label" for="proxyHostFallback">Host</label>
+              <div class="col-xs-10">
+                <input type="text" name="proxyHostFallback" id="proxyHostFallback">
+              </div>
+              <label class="col-xs-2 col-form-label" for="proxyPortFallback">Port</label>
+              <div class="col-xs-10">
+                <input type="text" name="proxyPortFallback" id="proxyPortFallback" class="port">
+              </div>
+            </fieldset>
+            <fieldset class="collapse advanced">
+              <label for="bypassList">Bypass proxy for these hosts:</label>
+              <textarea class="form-control" id="bypassList" name="bypassList" placeholder="<local>,192.168.1.1/16, .example.com"></textarea>
+            </fieldset>
+          </section>
+        </fieldset>
+        <input class="btn btn-primary first" type="submit" value="Save proxy settings">
+        <button class="btn btn-primary" value="incognito">Configure incognito window settings.</button>
+      </form>
     </div>
+  </div>
+  <div class="tab-pane" id="string-tab" role="tabpanel">
+    <nav class="navbar navbar-default mainPopup" role="navigation">
+
+      <div role="main">
+        <div class="inputs">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="input-group">
+                <input id="textField" class="form-control"  type="text" placeholder="Enter your string">
+                <span class="input-group-btn">
+                  <button id="size" class="btn btn-default inline-btn" disabled>0</input>
+                </span>
+              </div>
+              <p><span id="resultWhiteSpaces"></span></p>
+            </div>
+            <div class="col-lg-6 generate">
+              <div class="input-group">
+                <input id="textLength" class="form-control" type="text" placeholder="Enter number of characters">
+                <span class="input-group-btn">
+                  <button id="random-string" class="btn btn-primary inline-btn" type="button">Generate</button>
+                </span>
+              </div>
+            </div>
+            <a id="clipboard" class="copy" data-clipboard-target="#resultGenerator" href="#"><img src="../../icons/copy.png"></a>
+            <p id="resultGenerator"></p>
+          </div>
+        </div>
+      </div>
+    </nav>
   </div>
 
 
