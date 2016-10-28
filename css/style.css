@@ -96,23 +96,30 @@ li.active>a:focus {
 
 .inline-btn {
 	margin-top: 0px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    margin-left: -1px;
-    min-width: 92px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	margin-left: -1px;
+	min-width: 92px;
 }
 
 #resultGenerator {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	max-width: 330px;
+	max-width: 320px;
 	float: left;
 }
 
 #clipboard {
 	visibility: hidden;
 	float: left;
+	margin-left: 13px;
+}
+
+#clipboard img {
+	width: 25px;
+	margin-top: 5px;
+
 }
 
 .generate {
