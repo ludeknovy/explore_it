@@ -96,9 +96,7 @@ li.active>a:focus {
 
 .inline-btn {
 	margin-top: 0px;
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
-	margin-left: -1px;
+
 	min-width: 92px;
 }
 
@@ -111,15 +109,16 @@ li.active>a:focus {
 }
 
 #clipboard {
-	visibility: hidden;
 	float: left;
-	margin-left: 13px;
+	height: 34px;
+	width: 35px;
+	margin-left: -2px;
 }
 
 #clipboard img {
-	width: 25px;
-	margin-top: 5px;
-
+	width: 17px;
+	right: 3px;
+    position: relative;
 }
 
 .generate {
@@ -129,4 +128,29 @@ li.active>a:focus {
 #size {
 	min-width: 35px;
 	height: 34px;
+}
+
+#textLength {
+	max-width: 40px;
+}
+
+#random-field {
+	height: 35px;
+}
+
+.generate-input {
+	margin-top: 0px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	margin-left: -1px;
+}
+
+#string {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	width: 100%;
+}
+
+#edit-number {
+	width: 57px;
 }

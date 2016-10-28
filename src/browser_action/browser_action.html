@@ -220,21 +220,22 @@
               <div class="input-group">
                 <input id="textField" class="form-control"  type="text" placeholder="Enter your string">
                 <span class="input-group-btn">
-                  <button id="size" class="btn btn-default inline-btn" disabled>0</input>
+                  <button id="size" class="btn btn-default inline-btn" disabled>0</button>
                 </span>
               </div>
               <p><span id="resultWhiteSpaces"></span></p>
             </div>
-            <div class="col-lg-6 generate">
+            <div class="col-lg-6">
               <div class="input-group">
-                <input id="textLength" class="form-control" type="text" placeholder="Enter number of characters">
+                <input id="edit-number" class="form-control"  type="text" placeholder="">
+                <span class="input-group-btn" style="width: 100%">
+                  <input id="string" class="btn btn-default generate-input disabled" placeholder="Add a string lenght"></input>
+                </span>
                 <span class="input-group-btn">
-                  <button id="random-string" class="btn btn-primary inline-btn" type="button">Generate</button>
+                  <button id="clipboard" class="btn btn-default generate-input copy" data-clipboard-target="#string"><img src="../../icons/copy.svg"></button>
                 </span>
               </div>
             </div>
-            <a id="clipboard" class="copy" data-clipboard-target="#resultGenerator" href="#"><img src="../../icons/copy.png"></a>
-            <p id="resultGenerator"></p>
           </div>
         </div>
       </div>

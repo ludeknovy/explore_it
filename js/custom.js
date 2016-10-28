@@ -7,27 +7,34 @@ window.onload = function () {
 	});
 
 	$("#textField").bind("change paste keyup", function() {
-		var x = $(this).val()
-		$("#size").html(x.length);
+		var string = $(this).val()
+		$("#size").html(string.length);
+	});
 
-
-});
-
-	$("#random-string").click(function() {
-		var length = document.getElementById("textLength").value;
-		if (length % 1 === 0) {
+	$("#edit-number").bind("keyup", function(e) {
+		var code = (e.keyCode || e.which);
+		var digit = $(this).val();
+		if(code == 37 || code == 38 || code == 39 || code == 40 || code==16) {
+			return;
+		}
+		if (digit > 0 && digit < 1000) {
 			var random = "";
 			var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-			for( var i=0; i < length; i++ )
+			for (var i=0; i < digit; i++ ) {
 				random += possible.charAt(Math.floor(Math.random() * possible.length));
-			$("#clipboard").css("visibility", "visible");
-			$("#resultGenerator").html(random) ;
-//			document.getElementById("resultGenerator").innerHTML = random;
+			}
+			$("#string").val(random) ;
+		} else if (digit > 1001) {
+			$("#string").val("Number is too large");
+		} else if (digit == "") {
+			$("#string").val("Add a number");
 		} else {
-			$("#resultGenerator").html("invalid input");
+			$("#string").val("invalid input");
 		}
-	})
-};
+	});	
+};	
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
 	var c = new ProxyFormController( 'proxyForm' );
