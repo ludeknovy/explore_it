@@ -154,3 +154,10 @@ li.active>a:focus {
 #edit-number {
 	width: 57px;
 }
+
+#screen img{
+	width: 25px;
+    float: right;
+    margin-right: 7px;
+    margin-top: 5px;
+}

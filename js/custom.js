@@ -1,6 +1,9 @@
 window.onload = function () {
 	new Clipboard('.copy');
 
+	$("#screen").click(function() {
+    chrome.extension.sendMessage({name: 'screenshot'})
+    });	
 
 	$(".copy").click(function() {
 		window.close();
