@@ -1,14 +1,27 @@
 <html>
-<script src="js/render.js" crossorigin="anonymous"></script>
-<script src="js/jquery-3.1.1.js" crossorigin="anonymous"></script>
+<script src="../js/jquery-3.1.1.js" crossorigin="anonymous"></script>
+<script src="../js/render.js" crossorigin="anonymous"></script>
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="../css/screenshot.css">
 <body>
-<p class="text"></p>
-  Image here:
-  <p>
-    <img id="target" src="white.png" height="480">
-    <canvas id="myCanvas"></canvas>
-  <p>
-  End image
-  </body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+		<ul class="nav navbar-nav"> 
+			<li class="active">
+				<button class="btn btn-primary btn-nav">Link</button>
+			</li>
+			<li>
+				<button class="btn btn-primary btn-nav">Link</button>
+			</li>
+			<li>
+				<button class="btn btn-primary btn-nav">Link</button>
+			</li>
+		</ul>
+		</div>
+	</nav>
+	<div class="content">
+		<canvas id="myCanvas"></canvas>
+	</div>
+</body>
 </html>

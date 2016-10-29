@@ -28,7 +28,7 @@ var id = 100;
  		chrome.tabs.captureVisibleTab(null, null, function(dataUrl) {
 
 
- 			var viewTabUrl = chrome.extension.getURL('screenshot.html?id=' + id++)
+ 			var viewTabUrl = chrome.extension.getURL('src/screenshot.html?id=' + id++)
  			var targetId = null;
 
  			chrome.tabs.onUpdated.addListener(function listener(tabId, changedProps) {
