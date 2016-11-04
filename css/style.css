@@ -165,6 +165,7 @@ li.active>a:focus {
 .dropdown .input-value {
 	width: 100%;
 	margin-top: 0px;
+	cursor: default;
 }
 
 .dropdown .input-group-btn {
