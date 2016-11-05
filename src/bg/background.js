@@ -23,8 +23,21 @@ var id = 100;
   }
 });
 
- chrome.extension.onMessage.addListener(function(request, sender) {
- 	if (request.name == 'screenshot') {
+ chrome.extension.onMessage.addListener(function(request, sender,sendResponse) {
+  if (request.name == 'json') {
+//    jsonData = null;
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var jsonData = this.responseText;
+      sendResponse({url: jsonData});
+
+    }
+  };
+    xhr.open("GET", chrome.extension.getURL('/src/data/explore-data.json'), true);
+    xhr.send();
+  }
+ 	else if (request.name == 'screenshot') {
  		chrome.tabs.captureVisibleTab(null, null, function(dataUrl) {
 
 
@@ -64,21 +77,4 @@ var id = 100;
  	}
  	return true;
  });
-
- chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
-  if (request.name == 'json') {
-//    jsonData = null;
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      var jsonData = this.responseText;
-      sendResponse({url: jsonData});
-
-    }
-  };
-    xhr.open("GET", chrome.extension.getURL('/src/data/explore-data.json'), true);
-    xhr.send();
-  }
-});
-
 
