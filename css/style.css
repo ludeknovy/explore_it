@@ -162,13 +162,13 @@ li.active>a:focus {
     margin-top: 8px;
 }
 
-.dropdown .input-value {
+.dropdown-menu .input-value {
 	width: 100%;
 	margin-top: 0px;
 	cursor: default;
 }
 
-.dropdown .input-group-btn {
+.dropdown-menu .input-group-btn {
 	width: 100% !important;
 }
 

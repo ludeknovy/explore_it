@@ -1,0 +1,52 @@
+{
+	"Lorems": {
+		"icon": "lorem1.png",
+		"items": {
+			"lorem-czech": "Příliš žluťoučký kůň úpěl ďábelské ódy",
+			"lorem-czehc2": "á Á č Č ď Ď é É ě Ě í Í ň Ň ó Ó ř Ř š Š ť Ť ú Ú ů Ů ý Ý ž Ž",
+			"lorem-chinese": "証碁併第文害担去調件沸暮問内為供。義留南能住授競士者散碁製展。士的賞未弱目経鹿致存門徳覧送近給改熱他。業芸事節取月題読告読要年止止属志継提業看。",
+			"lorem-japanese": "寿限無、寿限無。シューリンガンのグーリンダイ、五劫の擦り切れ。長久命の長助。寿限無、寿限無、やぶら小路の藪柑子、海砂利水魚の、パイポパイポ パイポのシューリンガン。",
+			"lorem-cyrillic": "Лорем ипсум долор сит амет, но ноструд инструцтиор пер. Ан патриояуе тхеопхрастус мел. Но алияуид долорес пертинах ест. Усу тота нихил дефиниебас еу, пер ерос яуандо те."
+		}
+	},
+	"Phone numbers": {
+		"icon": "phone.png",
+		"items": {
+			"phone-czech": "722 567 123",
+			"phone-czech2": "772567123",
+			"phone-czech3": "+420 722 567 123",
+			"phone-czech4": "+420722567123"
+		}
+	},
+	"Names": {
+		"icon": "person.png",
+		"items": {
+			"name-czech": "Libuše Šmuclerová",
+			"name-czech2": "Jiří Řehák",
+			"name-russian": "Беляева Марина",
+			"name-russian2": "Жуков Алексей"
+		}
+	},
+	"Postal codes": {
+		"icon": "post.png",
+		"items": {
+			"postal-czech": "14700",
+			"postal-czech2": "147 00",
+			"uk": "ZE1 0PY"
+		}
+	},
+	"Exploit": {
+		"icon": "exploit.png",
+		"items": {
+			"exploit-xss": "<script>alert(1);</script>",
+			"exploit-sql": "'OR 1=1"
+		}
+	},
+	"Cities": {
+		"icon": "city.png",
+		"items": {
+			"city-czech": "Aš",
+			"city-czech2": "Nová Ves u Nového Města na Moravě"
+		}
+	}
+}
