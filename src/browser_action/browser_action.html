@@ -1,103 +1,44 @@
 <!doctype html>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="../../css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 <script src="../../js/jquery-3.1.1.js"></script>
-<script src="../../js/bootstrap.min.js"></script>
 <script src="../../js/clipboard.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
 <script src="../../js/custom.js"</script>
 <script src="../../js/render.js"></script>
 <script src="../bg/proxy_form_controller.js"></script>
 
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
 
-<body>
-  <ul class="nav nav-tabs">
-    <li class="nav-item">
-      <a class="nav-link active" data-toggle="tab" href="#explore">Explore</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#string-tab">Stringear</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#proxytab">Proxy</a>
-    </li>
-      <a id="screen" class="nav-link" data-toggle="tab" href="#"><img src="../../icons/screen.png"></a>
-  </ul>
+  <body>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#explore">Explore</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#string-tab">Stringear</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#proxytab">Proxy</a>
+      </li>
+      <a id="screen" class="nav-link tool-icons" data-toggle="tab" href="#"><img src="../../icons/screen.png"></a>
+    </ul>
 
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div class="tab-pane active" id="explore" role="tabpanel">
-      <nav id="mainPopup" class="navbar navbar-default mainPopup" role="navigation">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="navbar">
-          <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle lorem" data-toggle="dropdown"><img src="../../icons/lorem1.png">Lorems <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a class="copy" href="#"  data-clipboard-text="Příliš žluťoučký kůň úpěl ďábelské ódy">Czech</a></li>
-                <li><a class="copy" href="#"  data-clipboard-text="á Á č Č ď Ď é É ě Ě í Í ň Ň ó Ó ř Ř š Š ť Ť ú Ú ů Ů ý Ý ž Ž">Czech special char</a></li>
-                <li><a class="copy" href="#"  data-clipboard-text="証碁併第文害担去調件沸暮問内為供。義留南能住授競士者散碁製展。士的賞未弱目経鹿致存門徳覧送近給改熱他。業芸事節取月題読告読要年止止属志継提業看。">Chinese</a></li>
-                <li><a class="copy" href="#"  data-clipboard-text="寿限無、寿限無。シューリンガンのグーリンダイ、五劫の擦り切れ。長久命の長助。寿限無、寿限無、やぶら小路の藪柑子、海砂利水魚の、パイポパイポ パイポのシューリンガン。">Japanese</a></li>
-                <li><a class="copy" href="#"  data-clipboard-text="Лорем ипсум долор сит амет, но ноструд инструцтиор пер. Ан патриояуе тхеопхрастус мел. Но алияуид долорес пертинах ест. Усу тота нихил дефиниебас еу, пер ерос яуандо те.">Cyrillic</a></li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="../../icons/phone.png">Phone numbers <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-             <li><a class="copy" href="#" data-clipboard-text="722 567 123">Czech</a></li>
-             <li><a class="copy" href="#" data-clipboard-text="722567123">Czech [no spaces]</a></li>
-             <li><a class="copy" href="#" data-clipboard-text="+420 722 567 123">Czech [prefix]</a></li>
-             <li><a class="copy" href="#" data-clipboard-text="+420722567123">Czech [prefix, no spaces]</a></li>
-           </ul>
-         </li>
-       </ul>
-       <ul class="nav navbar-nav navbar-right">
-         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="../../icons/post.png">Postal codes<b class="caret"></b></a>
-          <ul class="dropdown-menu">
-           <li><a class="copy" href="#" data-clipboard-text="147 00">Czech</a></li>
-           <li><a class="copy" href="#" data-clipboard-text="14700">Czech [no space]</a></li>
-           <li><a class="copy" href="#" data-clipboard-text="ZE1 0PY">UK</a></li>
-         </ul>
-       </li>
-     </ul>
-     <ul class="nav navbar-nav navbar-right">
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="../../icons/exploit.png">Exploit <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a class="copy" data-clipboard-text="<script>alert(1)</script>" href="#">XSS simple</a></li>
-          <li><a class="copy" data-clipboard-text="'OR 1=1" href="#">SQL injection</a></li>
-        </ul>
-      </li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="../../icons/city.png">Cities <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a class="copy" data-clipboard-text="Aš" href="#">Czech [shortest]</a></li>
-          <li><a class="copy" data-clipboard-text="Nová Ves u Nového Města na Moravě" href="#">Czech [longest]</a></li>
-        </ul>
-      </li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="../../icons/person.png">Names <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a class="copy" data-clipboard-text="Libuše Šmuclerová" href="#">Czech [famale]</a></li>
-          <li><a class="copy" data-clipboard-text="Jiří Řehák" href="#">Czech [male]</a></li>
-          <li><a class="copy" data-clipboard-text="Беляева Марина" href="#">Russian [female]</a></li>
-          <li><a class="copy" data-clipboard-text="Жуков Алексей" href="#">Russian [male]</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div><!-- /.navbar-collapse -->
-</nav>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div class="tab-pane active" id="explore" role="tabpanel">
+        <nav id="mainPopup" class="navbar navbar-default mainPopup" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="navbar">
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+                
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </nav>
 </div>
 
 <div class="tab-pane" id="proxytab" role="tabpanel">

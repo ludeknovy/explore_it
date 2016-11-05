@@ -155,9 +155,33 @@ li.active>a:focus {
 	width: 57px;
 }
 
-#screen img{
+.tool-icons img{
 	width: 20px;
     float: right;
     margin-right: 10px;
     margin-top: 8px;
+}
+
+.dropdown-menu .input-value {
+	width: 100%;
+	margin-top: 0px;
+	cursor: default;
+}
+
+.dropdown-menu .input-group-btn {
+	width: 100% !important;
+}
+
+.clipboard-left {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-top-left-radius: 5px !important;
+	border-bottom-left-radius: 5px !important;
+	margin-left: 0px;
+	margin-top: 0px;
+}
+
+.input-right {
+	width: 100%;
+    padding-right: 2px;
 }

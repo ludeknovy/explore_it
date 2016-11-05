@@ -1,5 +1,6 @@
-.navbar-fixed-top .container {
+.navbar-fixed-top .container-right {
 	margin-left: 0px;
+	float: right;
 }
 
 .content {
@@ -7,8 +8,37 @@
 }
 
 .btn-nav {
-	margin-top: 8px;
     margin-right: 10px;
+    height: 34px;
+}
+
+.navbar-nav a {
+	padding-bottom: 5px !important;
+    padding-top: 5px !important;
+    color: white !important;
+    background-color: #337ab7 !important;
+}
+
+.nav-right {
+	float: right;
+}
+
+#filename {
+	max-width: 139px;
+    float: right;
+    margin-right: -1px;
+}
+
+.control-panel {
+	margin-top: 8px;
+}
+
+#imageView {
+	position: absolute;
+}
+
+#imageTemp {
+	position: absolute;
 }
 
 
