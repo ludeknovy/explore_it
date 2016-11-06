@@ -22,5 +22,21 @@ function setScreenshotUrl(url) {
   		ctx.drawImage(img,0,0, width, height); // Or at whatever offset you like
 	}
 
+	saveFile(url);
+}
+
+function saveFile(url) {
+	var download = $("#save-as");
+	download.click(function() {
+		var optionalFile = $("#filename").val();
+		if (optionalFile != "") {
+			download.attr("download", optionalFile);
+		}
+	download.attr("href",url)
+
+	});
+
+
+
 }
 
