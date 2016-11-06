@@ -1,4 +1,4 @@
-window.onload = function () {
+$("#body").ready(function() {
 
 	loadData();
 
@@ -33,7 +33,7 @@ window.onload = function () {
 		}
 	});
 
-};	
+});	
 
 
 
@@ -49,7 +49,7 @@ function loadData () {
 			var category = key;
 			var categoryID = category.replace(/ /g,'');
 			var categoryHtml = "<li id='" + categoryID +"' class='dropdown='><a href='#' class='dropdown-toggle lorem' data-toggle='dropdown'><img src='../../icons/" + img +"'>" + category + "<b class='caret'></b></a><ul class='dropdown-menu'>";
-			$(".mainPopup .nav.navbar-nav").append(categoryHtml);
+			$("#explore .nav.navbar-nav").append(categoryHtml);
 			$.each(val.items, function(itemKey, item) {
 				var tempItem = item;
 				var tempItemHtml = '<div class="col-lg-6"><div class="input-group"><button id="clipboard" class="btn btn-default copy clipboard-left" data-clipboard-target="#' + itemKey +'"><img src="../../icons/copy.svg"></button><span class="input-group-btn"><input id="' + itemKey +'" class="btn btn-default generate-input disabled input-value" value="' + item +'"></input></span></div></div>';
@@ -64,6 +64,7 @@ function loadData () {
 		});
 	});	
 };
+
 
 
 
