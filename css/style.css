@@ -73,7 +73,7 @@ select {
 }
 
 .nav-tabs {
-	border: none !important;
+	border: none;
 }
 
 li.active>a:focus {

@@ -1,10 +1,12 @@
-$("#body").ready(function() {
+window.onload = function() {
 
-	loadData();
 
 	$("#screen").click(function() {
 		chrome.extension.sendMessage({name: 'screenshot'})
 	});
+
+	loadData();
+
 
 	$("#textField").bind("change paste keyup", function() {
 		var string = $(this).val()
@@ -33,7 +35,7 @@ $("#body").ready(function() {
 		}
 	});
 
-});	
+};	
 
 
 
