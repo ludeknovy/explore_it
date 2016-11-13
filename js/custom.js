@@ -63,8 +63,8 @@ function loadData () {
 
 		$(".copy").click(function() {
 			window.close();
-		});
 	});	
+});
 };
 
 

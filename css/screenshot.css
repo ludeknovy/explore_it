@@ -41,4 +41,31 @@
 	position: absolute;
 }
 
+#tool {
+	float: left;
+}
+
+#colors_sketch {
+	width: 5px !important; 
+	border: 1px solid black;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    font-weight: bold;
+}
+
+#myCanvasPaint {
+	position: absolute;
+	top: 42px;
+}
+
+#tempCanvas {
+	display: none;
+}
+
 
