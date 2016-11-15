@@ -16,7 +16,7 @@
 	padding-bottom: 5px !important;
     padding-top: 5px !important;
     color: white !important;
-    background-color: #337ab7 !important;
+    background-color: #337ab7;
 }
 
 .nav-right {
@@ -66,6 +66,26 @@
 
 #tempCanvas {
 	display: none;
+}
+
+.tool a {
+	margin-left: 5px;
+}
+
+.color-yellow {
+	background-color: #f3d011 !important;
+}
+
+.color-red {
+	background-color: #f33411 !important;
+}
+
+.color-black {
+	background-color: #000 !important;
+}
+
+.color-switch {
+	height: 24px;
 }
 
 

@@ -3,12 +3,6 @@
 // found in the LICENSE file.
 
 window.onload = function() {
-	$.each(['#f00', '#ff0', '#0f0', '#0ff', '#00f', '#f0f', '#000', '#fff'], function() {
-		$('.control-panel #tool').append("<a href='#colors_sketch' data-color='" + this + "' style='width: 10px; background: " + this + ";'>" + this + "</a> ");
-	});
-	$.each([3, 5, 10, 15], function() {
-		$('.control-panel #tool').append("<a href='#colors_sketch' data-size='" + this + "' style='background: #ccc'>" + this + "</a> ");
-	});
 	$('#myCanvasPaint').sketch();
 };
 
@@ -24,19 +18,25 @@ function setScreenshotUrl(url) {
 	var ratio = img.width / img.height
 	var width = window.innerWidth;
 	var height = 0; 
+	console.log(ratio, width, height)
 	if (img.width > width) {
+		console.log("r")
 		height = (img.width - width) / ratio;
+	} else {
+		height = window.innerHeight;
 	}
 //window.addEventListener('resize', resizeCanvas, false);
-myCanvas.width = width;
-myCanvas.height = height;
-myCanvasPaint.width = width;
-myCanvasPaint.height = height;
-img.onload = function(){
-  		ctx.drawImage(img,0,0, width, height); // Or at whatever offset you like
-  	}
+	myCanvas.width = width;
+	myCanvas.height = height;
+	myCanvasPaint.width = width;
+	myCanvasPaint.height = height;
 
-  	saveFile(width, height);
+	console.log(height, width)
+	img.onload = function(){
+	  		ctx.drawImage(img,0,0, width, height); // Or at whatever offset you like
+	}
+
+  	saveFile(width, height)
   }
 
   function saveFile(width, height) {
