@@ -17,13 +17,12 @@ function setScreenshotUrl(url) {
 
 	var ratio = img.width / img.height
 	var width = window.innerWidth;
-	var height = 0; 
-	console.log(ratio, width, height)
-	if (img.width > width) {
+	var height = window.innerHeight; 
+	console.log(ratio, width, height, img.height, img.width)
+	if (img.width > width || img.height > height) {
 		console.log("r")
-		height = (img.width - width) / ratio;
-	} else {
-		height = window.innerHeight;
+		height = img.height / 2
+		width = img.width / 2
 	}
 //window.addEventListener('resize', resizeCanvas, false);
 	myCanvas.width = width;
