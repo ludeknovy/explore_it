@@ -63,9 +63,9 @@ select {
 }
 
 .nav-tabs>li.active>a {
-	color: #1b82da  !important;
+	color: #1b82da;
 	background-color: none;
-	border: none !important;
+	border: none;
 }
 
 .nav-tabs>li>a {
